@@ -1,0 +1,38 @@
+<ion-content style="--background:rgb(241,241,241);">
+
+  <ion-card style="box-shadow: 3px 7px 5px 6px rgba(232,208,232,1);" *ngFor="let debt of debts">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="2">
+          <ion-icon name="person" style="font-size: 23px; text-align: center;"></ion-icon>
+        </ion-col>
+        <ion-col size="6">
+          <ion-text>{{debt.borrowedFrom}}</ion-text>
+          <br>
+          <ion-text>{{debt.description}}</ion-text>
+
+        </ion-col>
+        <ion-col size="4">
+          <ion-text>PKR {{debt.amount}}</ion-text>
+          <br>
+          <ion-text>{{debt.date}}</ion-text>
+
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+    <ion-card-content style="padding: 0;">
+      <ion-button (click)="openEditDebt(debt.id)" fill="clear">
+        Edit Record
+      </ion-button>
+      <ion-button color="danger" (click)="confirmation(debt.id)" fill="clear">
+        Delete Record
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="openAddDebt()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

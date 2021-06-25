@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="close-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Create Debt Record</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="checkmark-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="borrowed-padding">
+    <ion-label>Debt Action</ion-label>
+    <ion-select>
+      <ion-select-option value="f">Repay Debt</ion-select-option>
+      <ion-select-option value="m">Increase Debt</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item class="borrowed-padding">
+    <ion-label>Acount</ion-label>
+    <ion-select>
+      <ion-select-option value="f">Cash</ion-select-option>
+      <ion-select-option value="m">Bank</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item class="borrowed-padding"> 
+    <ion-label position="floating">Amount</ion-label>
+    <ion-input placeholder="Amount in PKR" type="number"></ion-input>
+  </ion-item>
+
+</ion-content>

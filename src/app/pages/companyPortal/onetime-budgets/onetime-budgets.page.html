@@ -1,0 +1,16 @@
+<ion-content style="--background:rgb(241,241,241);">
+  <div style="height: 100%; display: flex; justify-content: center; align-items: center;">
+    <div style="text-align: center;">
+      <ion-icon name="person" style="font-size:65px; text-align: center;"></ion-icon>
+      <h3>Create One-Time Budgets</h3>
+      <p>Use one-time budgets for special occasion like christmas,vacation or reconstruction to stay on track</p>
+      <p>Start with (+) to create first one</p>
+
+    </div>
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="openAddBudget()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

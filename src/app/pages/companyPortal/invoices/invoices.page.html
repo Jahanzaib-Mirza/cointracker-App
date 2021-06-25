@@ -1,0 +1,305 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Invoices</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="editInvoice()">
+        <ion-icon name="create-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content style="--background:rgb(241,241,241);">
+  <div *ngIf="edit==false">
+
+    <ion-card style="box-shadow: 3px 7px 5px 6px rgba(232,208,232,1); ">
+      <div style="display: flex; flex-direction: row; width: 100%;">
+        <div class="ion-padding" style="float: left !important; width: 50%;">
+          <h6 style="color: black;">Beaty Abbot</h6>
+          <ion-text style="font-size: 12px; --ion-padding: 0;--ion-margin-top:0;">21677 Gulberg Town</ion-text>
+          <br>
+          <ion-text style="font-size: 12px; --ion-padding: 0;--ion-margin-top:0;">miastaf 36683-282828</ion-text>
+          <br>
+          <ion-text style="font-size: 12px; --ion-padding: 0;--ion-margin-top:0;">Unted Kingdom</ion-text>
+        </div>
+        <div class="ion-padding" style="float: right !important; width: 50%; text-align: right;">
+          <h6 style="color: black;">Beaty Abbot</h6>
+          <ion-text style="font-size: 12px; --ion-padding: 0;--ion-margin-top:0;">21677 Gulberg Town</ion-text>
+          <br>
+          <ion-text style="font-size: 12px; --ion-padding: 0;--ion-margin-top:0;">miastaf 36683-282828</ion-text>
+          <br>
+          <ion-text style="font-size: 12px; --ion-padding: 0;--ion-margin-top:0;">Unted Kingdom</ion-text>
+        </div>
+      </div>
+    </ion-card>
+    <ion-card color="primary">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="3">
+            <ion-text style="font-size: 12px; font-weight: bold;">Invoice No.</ion-text>
+            <div style="width: 90%; height: 2px; background-color: white;"></div>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 12px; font-weight: bold;">Purchase ID</ion-text>
+            <div style="width: 90%; height: 2px; background-color: white;"></div>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 12px; font-weight: bold;">Invoice Date</ion-text>
+            <div style="width: 90%; height: 2px; background-color: white;"></div>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 12px; font-weight: bold;">Due Date</ion-text>
+            <div style="width: 90%; height: 2px; background-color: white;"></div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            <ion-text style="font-size: 14px;">INV-1126</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 14px;">67</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 14px;">12-04-2021</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 14px;">12-11-2021</ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+    <ion-card style="box-shadow: 3px 7px 5px 6px rgba(232,208,232,1); ">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="3">
+            <ion-text style="font-size: 12px; font-weight: bold;">Description</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 12px; font-weight: bold;">Service Date</ion-text>
+          </ion-col>
+          <ion-col size="2">
+            <ion-text style="font-size: 12px; font-weight: bold;">Cost</ion-text>
+          </ion-col>
+          <ion-col size="2">
+            <ion-text style="font-size: 12px; font-weight: bold;">QTY</ion-text>
+          </ion-col>
+          <ion-col size="2">
+            <ion-text style="font-size: 12px; font-weight: bold;">Total</ion-text>
+          </ion-col>
+          <div style="width: 100%; height: 2px; background-color: rgb(51, 145, 207);"></div>
+
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            <ion-text style="font-size: 14px;">INV-1126</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 14px;">12-04-2021</ion-text>
+          </ion-col>
+          <ion-col size="2">
+            <ion-text style="font-size: 14px;">Rs.670</ion-text>
+          </ion-col>
+          <ion-col size="2">
+            <ion-text style="font-size: 14px;">2</ion-text>
+          </ion-col>
+          <ion-col size="2">
+            <ion-text style="font-size: 14px;">1340</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            <ion-text style="font-size: 14px;">INV-1126</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 14px;">12-04-2021</ion-text>
+          </ion-col>
+          <ion-col size="2">
+            <ion-text style="font-size: 14px;">Rs.670</ion-text>
+          </ion-col>
+          <ion-col size="2">
+            <ion-text style="font-size: 14px;">2</ion-text>
+          </ion-col>
+          <ion-col size="2">
+            <ion-text style="font-size: 14px;">1340</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            <ion-text style="font-size: 14px;">INV-1126</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 14px;">12-04-2021</ion-text>
+          </ion-col>
+          <ion-col size="2">
+            <ion-text style="font-size: 14px;">Rs.670</ion-text>
+          </ion-col>
+          <ion-col size="2">
+            <ion-text style="font-size: 14px;">2</ion-text>
+          </ion-col>
+          <ion-col size="2">
+            <ion-text style="font-size: 14px;">1340</ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <div style="width: 100%; height: 2px; background-color: rgb(51, 145, 207);"></div>
+      <div style="display: flex; flex-direction: row-reverse; width: 100%;">
+        <div style="text-align: right; margin-right: 40px;">
+          <ion-text style="font-size: 18px; color: rgb(216, 39, 122);">SubTotal: <ion-text
+              style="font-size: 14px; color: black;">676</ion-text>
+          </ion-text>
+          <br>
+          <ion-text style="font-size: 18px; color: rgb(216, 39, 122);">Discount: <ion-text
+              style="font-size: 14px; color: black;">87</ion-text>
+          </ion-text>
+          <br>
+          <ion-text style="font-size: 18px; color: rgb(216, 39, 122);">VAT: <ion-text
+              style="font-size: 14px; color: black;">87</ion-text>
+          </ion-text>
+          <br>
+          <ion-text style="font-size: 18px; color: rgb(216, 39, 122);">Deposit: <ion-text
+              style="font-size: 14px; color: black;">989</ion-text>
+          </ion-text>
+          <div style="background-color: #40c4b3; border-radius: 5px;">
+            <ion-text style="font-size: 18px; color: #fff;">Total Due: <ion-text style="font-size: 14px; color: #ffff;">
+                989</ion-text>
+            </ion-text>
+          </div>
+        </div>
+      </div>
+
+    </ion-card>
+  </div>
+  <!-- ksksks -->
+  <div *ngIf="edit==true">
+    <ion-card style="box-shadow: 3px 7px 5px 6px rgba(232,208,232,1); ">
+      <div style="display: flex; flex-direction: row; width: 100%;">
+        <div class="ion-padding" style="float: left !important; width: 50%;">
+          <ion-item>
+            <ion-label position="floating">Name</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Address</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </div>
+        <div class="ion-padding" style="float: right !important; width: 50%; text-align: right;">
+          <h6 style="color: black;">Beaty Abbot</h6>
+          <ion-text style="font-size: 12px; --ion-padding: 0;--ion-margin-top:0;">21677 Gulberg Town</ion-text>
+          <br>
+          <ion-text style="font-size: 12px; --ion-padding: 0;--ion-margin-top:0;">miastaf 36683-282828</ion-text>
+          <br>
+          <ion-text style="font-size: 12px; --ion-padding: 0;--ion-margin-top:0;">Unted Kingdom</ion-text>
+        </div>
+      </div>
+    </ion-card>
+    <ion-card color="primary">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="3">
+            <ion-text style="font-size: 12px; font-weight: bold;text-align: center;">Invoice No.</ion-text>
+            <div style="width: 30%; height: 2px; background-color: white;"></div>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 12px; font-weight: bold;text-align: center;">Purchase ID</ion-text>
+            <div style="width: 30%; height: 2px; background-color: white;"></div>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 12px; font-weight: bold;text-align: center;">Invoice Date</ion-text>
+            <div style="width: 30%; height: 2px; background-color: white;"></div>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 12px; font-weight: bold;text-align: center;">Due Date</ion-text>
+            <div style="width: 30%; height: 2px; background-color: white;"></div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="3">
+            <ion-text style="font-size: 14px;">INV-1126</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 14px;">67</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-input type="date"></ion-input>
+          </ion-col>
+          <ion-col size="3">
+            <ion-input type="date"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+    <ion-card style="box-shadow: 3px 7px 5px 6px rgba(232,208,232,1); ">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="3">
+            <ion-text style="font-size: 12px; font-weight: bold;">Name</ion-text>
+          </ion-col>
+
+
+          <ion-col size="3">
+            <ion-text style="font-size: 12px; font-weight: bold;">Cost</ion-text>
+          </ion-col>
+          <ion-col size="3">
+            <ion-text style="font-size: 12px; font-weight: bold;">QTY</ion-text>
+          </ion-col>
+
+          <ion-col size="2">
+            <ion-text style="font-size: 12px; font-weight: bold;">Total</ion-text>
+          </ion-col>
+          <div style="width: 100%; height: 2px; background-color: rgb(51, 145, 207);"></div>
+
+        </ion-row>
+        <ion-row *ngFor="let item of breakdowns">
+          <ion-col size="3">
+            <ion-input [(ngModel)]="name" placeholder="Name" type="text"></ion-input>
+          </ion-col>
+          <ion-col size="3">
+            <ion-input [(ngModel)]="amount" placeholder="Cost" type="number"></ion-input>
+          </ion-col>
+          <ion-col size="3">
+            <ion-input [(ngModel)]="qty" placeholder="QTY" type="number"></ion-input>
+          </ion-col>
+          <ion-col size="2">
+            <ion-text style="font-size: 14px;">298</ion-text>
+          </ion-col>
+          <ion-col size="1">
+            <ion-button (click)="add()">
+              <ion-icon name="add-outline" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+      <div style="width: 100%; height: 2px; background-color: rgb(51, 145, 207);"></div>
+      <div style="display: flex; flex-direction: row-reverse; width: 100%;">
+        <div style="text-align: right; margin-top: 10px; margin-bottom: 10px; margin-right: 40px;">
+          <ion-text style="font-size: 18px; color: rgb(216, 39, 122);">SubTotal: <ion-text
+              style="font-size: 14px; color: black;">676</ion-text>
+          </ion-text>
+          <br>
+          <ion-text style="font-size: 18px; color: rgb(216, 39, 122);">Discount: <ion-text
+              style="font-size: 14px; color: black;">87</ion-text>
+          </ion-text>
+          <br>
+          <ion-text style="font-size: 18px; color: rgb(216, 39, 122);">VAT: <ion-text
+              style="font-size: 14px; color: black;">87</ion-text>
+          </ion-text>
+          <br>
+          <ion-text style="font-size: 18px; color: rgb(216, 39, 122);">Deposit: <ion-text
+              style="font-size: 14px; color: black;">989</ion-text>
+          </ion-text>
+          <div style="background-color: #40c4b3; border-radius: 5px;">
+            <ion-text style="font-size: 18px; color: #fff;">Total Due: <ion-text style="font-size: 14px; color: #ffff;">
+                989</ion-text>
+            </ion-text>
+          </div>
+        </div>
+      </div>
+
+    </ion-card>
+  </div>
+
+</ion-content>

@@ -1,0 +1,43 @@
+<ion-content class="background ion-text-center ion-justify-content-center ">
+
+  <div class="container bg-torq xc" style="margin-bottom: 30px;">
+    <div id="container">
+      <img class="user" src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" alt="">
+    </div>
+  </div>
+  <div>
+    <ion-text class="ion-margin-bottom" style="font-size: 28px;" color="dark">
+      Welcome!
+    </ion-text>
+    <br>
+    <ion-text style="font-size: 26px;">
+      sign in to continue
+    </ion-text>
+  </div>
+
+  <div id="container" class="xc ion-margin-top">
+    <form novalidate [formGroup]="Form" (ngSubmit)="onSubmit()">
+      <ion-item color="light">
+        <ion-label>
+          <ion-icon name="person"></ion-icon>
+        </ion-label>
+        <ion-input autofocus="true" formControlName="Email" placeholder="Email" type="text"></ion-input>
+      </ion-item>
+      <div class="validation-errors">
+        <div class="error-message" *ngIf="FormErrors.Email"></div>
+      </div>
+      <ion-item color="light">
+        <ion-label>
+          <ion-icon name="lock-closed"></ion-icon>
+        </ion-label>
+        <ion-input placeholder="Password" formControlName="Password" type="Password"></ion-input>
+      </ion-item>
+      <div class="validation-errors">
+        <div class="error-message" *ngIf="FormErrors.Password"></div>
+      </div>
+      <div>
+        <ion-button type="submit" [disabled]="Form.invalid" shape="round ion-margin-top">Sign In</ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>

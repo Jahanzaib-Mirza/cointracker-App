@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="onDismiss()">
+        <ion-icon name="close-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Update Salary</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [disabled]="Form?.invalid" (click)="onSubmit()">
+        <ion-icon name="checkmark-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content style="--background:rgb(241,241,241);">
+  <div style="width: 100%; margin-top: 7px;" *ngIf="salary">
+    <form novalidate [formGroup]="Form" (ngSubmit)="onSubmit()">
+      <ion-item class="new-budget-padding">
+        <ion-label position="floating">Employee Name</ion-label>
+        <ion-input type="text" formControlName="employeeName"></ion-input>
+      </ion-item>
+      <ion-item class="new-budget-padding">
+        <ion-label position="floating">Job Description</ion-label>
+        <ion-input type="text" formControlName="jobDescription"></ion-input>
+      </ion-item>
+      <ion-item class="new-budget-padding">
+        <ion-label position="floating">Amount</ion-label>
+        <ion-input style="--padding-top: 0;--margin-top:0;" type="number" formControlName="amount"></ion-input>
+      </ion-item>
+      <ion-item class="new-budget-padding">
+        <ion-label position="fixed">Date</ion-label>
+        <ion-input type="date" formControlName="date"></ion-input>
+      </ion-item>
+    </form>
+  </div>
+
+</ion-content>

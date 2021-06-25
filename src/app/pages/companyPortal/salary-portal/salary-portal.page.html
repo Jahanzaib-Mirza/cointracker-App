@@ -1,0 +1,33 @@
+<ion-content style="--background:rgb(241,241,241);">
+  <ion-card *ngIf="salaries" style="box-shadow: 3px 7px 5px 6px rgba(232,208,232,1); ">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="5">
+          <ion-text style="font-size: 21px;color: black;">Name</ion-text>
+        </ion-col>
+        <ion-col size="4">
+          <ion-text style="font-size: 19px;color: black;">Amount</ion-text>
+        </ion-col>
+        <ion-col size="3">
+          <ion-text style="font-size: 21px;color: black;">Action</ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngFor="let salary of salaries">
+        <ion-col size="5">
+          <ion-text>{{salary.employeeName}}</ion-text>
+        </ion-col>
+        <ion-col size="4">
+          <ion-text>{{salary.amount}}</ion-text>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button (click)="openBtn($event,salary.id)" fill="clear"><ion-icon name="ellipsis-horizontal-outline" slot="icon-only"></ion-icon></ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="openAddSalary()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

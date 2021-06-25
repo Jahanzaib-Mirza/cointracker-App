@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Debts</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar style="--background:#40c4b3;" slot="top">
+      <ion-tab-button tab="active-debts">
+        <ion-label style="color: white; font-size: 16px;">Active</ion-label>
+        <!-- <ion-badge>6</ion-badge> -->
+      </ion-tab-button>
+
+      <ion-tab-button tab="closed-debts">
+        <!-- <ion-icon name="person-circle"></ion-icon> -->
+        <ion-label style="color: white; font-size: 16px;">Closed</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
+</ion-content>

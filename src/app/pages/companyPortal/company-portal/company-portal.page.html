@@ -1,0 +1,109 @@
+<ion-split-pane when="lg" style="--side-width:7px;" contentId="main">
+  <ion-menu contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content >
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/company-portal/customers" routerDirection="root" routerLinkActive="active-link">
+          <ion-label>
+            <ion-icon name="person-circle" slot="icon-only"></ion-icon>
+            Customers
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/company-portal/invoices" routerDirection="root" routerLinkActive="active-link">
+          <ion-label>
+            <i class="fas fa-receipt"></i>
+            Invoices
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/company-portal/earnings" routerDirection="root" routerLinkActive="active-link">
+          <ion-label>
+            <i class="fas fa-money-check-alt"></i>
+            Earnings
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/company-portal/salary" routerDirection="root" routerLinkActive="active-link">
+          <ion-label>
+            <i class="fas fa-wallet"></i>
+            Salary
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/company-portal/tax" routerDirection="root" routerLinkActive="active-link">
+          <ion-label>
+            <i class="fas fa-percent"></i>
+            Tax
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/company-portal/expenses" routerDirection="root" routerLinkActive="active-link">
+          <ion-label>
+            <i class="fas fa-cash-register"></i>
+            Expenses
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/company-portal/debts" routerDirection="root" routerLinkActive="active-link">
+          <ion-label>
+            <i class="fas fa-donate"></i>
+            Debts
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/company-portal/budget" routerDirection="root" routerLinkActive="active-link">
+          <ion-label>
+            <i class="fas fa-file-invoice-dollar"></i>
+            Budget
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/company-portal/ledger" routerDirection="root" routerLinkActive="active-link">
+          <ion-label>
+            <i class="fas fa-calculator-alt"></i>
+            Ledger
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/company-portal/assets" routerDirection="root" routerLinkActive="active-link">
+          <ion-label>
+            <i class="fas fa-building"></i>
+            Assets
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/company-portal/audit-logs" routerDirection="root" routerLinkActive="active-link">
+          <ion-label>
+            <i class="fas fa-calculator"></i>
+            Audit Logs
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/company-portal/users" routerDirection="root" routerLinkActive="active-link">
+          <ion-label>
+            <ion-icon name="people"></ion-icon>
+            Users
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-split-pane>

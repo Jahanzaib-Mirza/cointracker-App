@@ -1,0 +1,35 @@
+<ion-content style="--background:rgb(241,241,241);">
+
+  <ion-card style="box-shadow: 3px 7px 5px 6px rgba(232,208,232,1);" *ngFor="let expense of expenses">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+          <ion-text>{{expense.category}}</ion-text>
+        </ion-col>
+        <ion-col size="4">
+          <ion-text>{{expense.description}}</ion-text>
+          <br>
+          <ion-text>Payment Mode:{{expense.paymentMode}}</ion-text>
+
+        </ion-col>
+        <ion-col size="5">
+          <ion-text>Rs.{{expense.amount}}</ion-text>
+          <br>
+          <ion-text>{{expense.date}}</ion-text>
+
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+    <ion-card-content style="padding: 0;">
+      <ion-button (click)="openEditExpense(expense.id)" fill="clear">
+        Edit Record
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="openNewExpense()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

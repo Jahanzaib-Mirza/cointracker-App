@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="onDismiss()">
+        <ion-icon name="close-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Edit Expense</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="confirmation(id)">
+        <ion-icon name="trash" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button [disabled]="Form?.invalid" (click)="onSubmit()">
+        <ion-icon name="checkmark-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content style="--background:rgb(241,241,241);">
+  <div style="width: 100%; margin-top: 7px;" *ngIf="Form">
+    <form novalidate [formGroup]="Form" (ngSubmit)="onSubmit()">
+      <ion-item class="new-budget-padding">
+        <ion-label position="floating">Description</ion-label>
+        <ion-input formControlName="description" type="text"></ion-input>
+      </ion-item>
+      <ion-item class="new-budget-padding">
+        <ion-label>Expense Type</ion-label>
+        <ion-select interface="popover" formControlName="expenseType">
+          <ion-select-option disabled value="nes">None</ion-select-option>
+          <ion-select-option value="week">Periodic</ion-select-option>
+          <ion-select-option value="month">One Time</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item class="new-budget-padding">
+        <ion-label>Period</ion-label>
+        <ion-select interface="popover" formControlName="period">
+          <ion-select-option disabled value="nes">None</ion-select-option>
+          <ion-select-option value="week">Week</ion-select-option>
+          <ion-select-option value="month">Month</ion-select-option>
+          <ion-select-option value="year">Year</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item class="new-budget-padding">
+        <ion-label>Payment Type</ion-label>
+        <ion-select interface="popover" style="width: 80%;" formControlName="paymentMode">
+          <ion-select-option disabled value="nes">None</ion-select-option>
+          <ion-select-option value="week">Card</ion-select-option>
+          <ion-select-option value="month">Cheque</ion-select-option>
+          <ion-select-option value="year">Cash</ion-select-option>
+          <ion-select-option value="one-time">IBFT</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item style="height: 43;" class="new-budget-padding">
+        <ion-label position="floating">Amount</ion-label>
+        <ion-input type="number" placeholder="Pkr" formControlName="amount"></ion-input>
+      </ion-item>
+      <ion-item class="new-budget-padding">
+        <ion-label position="fixed">Date</ion-label>
+        <ion-input type="date" formControlName="date"></ion-input>
+      </ion-item>
+    </form>
+    <!-- <ion-item class="new-budget-padding">
+      <ion-label position="fixed">Time</ion-label>
+      <ion-input type="time"></ion-input>
+    </ion-item>
+     -->
+    <!-- <ion-button routerLink="/select-label" expand="full">Add Label</ion-button>
+    <ion-button (click)="upload()" expand="full">Add Receipt</ion-button> -->
+  </div>
+
+</ion-content>

@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Users</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openAddUser()">
+        <ion-icon name="add" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="clerks">
+    <ion-card-header>
+      <ion-card-title>Clerks
+        <ion-text *ngIf="clerks" style="float: right;" class="ion-margin-right">{{clerks.length}}</ion-text>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list *ngFor="let clerk of clerks">
+        <ion-item-sliding>
+          <ion-item button [routerLink]="['/company-portal/user-details', clerk.id]">{{clerk.fullName}}</ion-item>
+          <ion-item-options slot="end">
+            <ion-button color="danger" (click)="confirmation(clerk.id)">
+              <ion-icon name="trash" slot="icon-only"></ion-icon>
+            </ion-button>
+            <ion-button color="tertiary">
+              <ion-icon name="create-outline" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-item-options>
+        </ion-item-sliding>  
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="managers">
+    <ion-card-header>
+      <ion-card-title>Managers
+        <ion-text *ngIf="managers" style="float: right;" class="ion-margin-right">{{managers.length}}</ion-text>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list *ngFor="let manager of managers">
+        <ion-item-sliding>
+          <ion-item button [routerLink]="['/company-portal/user-details', manager.id]">{{manager.fullName}}</ion-item>
+          <ion-item-options slot="end">
+            <ion-button color="danger" (click)="confirmation(manager.id)">
+              <ion-icon name="trash" slot="icon-only"></ion-icon>
+            </ion-button>
+            <ion-button color="tertiary">
+              <ion-icon name="create-outline" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-item-options>
+        </ion-item-sliding>  
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="accountants?.length!=0">
+    <ion-card-header >
+      <ion-card-title>Accountants
+        <ion-text *ngIf="accountants" style="float: right;" class="ion-margin-right">{{accountants.length}}</ion-text>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list *ngFor="let accountant of accountants">
+        <ion-item-sliding>
+          <ion-item button [routerLink]="['/company-portal/user-details', accountant.id]">{{accountant.fullName}}</ion-item>
+          <ion-item-options slot="end">
+            <ion-button color="danger" (click)="confirmation(accountant.id)">
+              <ion-icon name="trash" slot="icon-only"></ion-icon>
+            </ion-button>
+            <ion-button color="tertiary">
+              <ion-icon name="create-outline" slot="icon-only"></ion-icon>
+            </ion-button>
+          </ion-item-options>
+        </ion-item-sliding>  
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

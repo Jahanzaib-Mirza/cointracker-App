@@ -1,0 +1,32 @@
+<ion-content style="--background:rgb(241,241,241);">
+
+  <ion-card style="box-shadow: 3px 7px 5px 6px rgba(232,208,232,1);" *ngFor="let budget of budgets">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-title>{{budget.description}}</ion-title>
+        </ion-col>
+        <ion-col>
+          <ion-text>{{budget.amount}} PKR</ion-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-card-content style="padding: 0;">
+      <ion-button  fill="clear">
+        SHOW MORE
+      </ion-button>
+      <ion-button color="tertiary" (click)="openEditBudget(budget.id)" fill="clear">
+        Update
+      </ion-button>
+      <ion-button color="danger" (click)="confirmation(budget.id)" fill="clear">
+        Delete
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="openAddBudget()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

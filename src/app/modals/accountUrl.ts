@@ -1,0 +1,1 @@
+export const accountUrl = 'http://accountmanagement-api.cointracker.nastechltd.co/';

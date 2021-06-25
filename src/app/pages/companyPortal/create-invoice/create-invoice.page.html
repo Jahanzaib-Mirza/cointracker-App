@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/company-portal/invoices">
+        <ion-icon name="close-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Create Invoice</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="checkmark-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content style="--background:rgb(241,241,241);">
+  <div style="width: 100%; margin-top: 7px;">
+    <ion-item class="new-budget-padding">
+      <ion-label position="floating">Description</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item class="new-budget-padding">
+      <ion-label position="fixed">Service Date</ion-label>
+      <ion-input type="date"></ion-input>
+    </ion-item>
+    <ion-item class="new-budget-padding">
+      <ion-label position="fixed">Due Date</ion-label>
+      <ion-input type="date"></ion-input>
+    </ion-item>
+    <ion-item class="new-budget-padding">
+      <ion-label position="floating">Discount</ion-label>
+      <ion-input style="--padding-top: 0;--margin-top:0;" type="number"></ion-input>
+    </ion-item>
+    <ion-item class="new-budget-padding">
+      <ion-label position="floating">Cost</ion-label>
+      <ion-input style="--padding-top: 0;--margin-top:0;" type="number"></ion-input>
+    </ion-item>
+    <ion-item class="new-budget-padding">
+      <ion-label position="floating">Quantity</ion-label>
+      <ion-input style="--padding-top: 0;--margin-top:0;" type="number"></ion-input>
+    </ion-item>
+    <ion-item class="new-budget-padding">
+      <ion-label>VAT</ion-label>
+      <ion-select interface="popover" style="width: 80%;">
+        <ion-select-option disabled value="nes">None</ion-select-option>
+        <ion-select-option value="week">Card</ion-select-option>
+        <ion-select-option value="month">Cheque</ion-select-option>
+        <ion-select-option value="year">Cash</ion-select-option>
+        <ion-select-option value="one-time">IBFT</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+  </div>
+
+</ion-content>

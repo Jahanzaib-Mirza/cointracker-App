@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="onDismiss()">
+        <ion-icon name="close-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>New Budget</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onSubmit()">
+        <ion-icon name="checkmark-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background:rgb(241,241,241);">
+  <div style="width: 100%; margin-top: 7px;">
+    <form novalidate [formGroup]="Form" (ngSubmit)="onSubmit()">
+      <ion-item class="new-budget-padding">
+        <ion-label position="floating">Description</ion-label>
+        <ion-input type="text" formControlName="description"></ion-input>
+      </ion-item>
+      <ion-item class="new-budget-padding">
+        <ion-label>Period</ion-label>
+        <ion-select interface="popover" formControlName="period">
+          <ion-select-option value="week">Week</ion-select-option>
+          <ion-select-option value="month">Month</ion-select-option>
+          <ion-select-option value="year">Year</ion-select-option>
+          <ion-select-option value="one-time">One Time</ion-select-option>
+        </ion-select>
+      </ion-item>
+        <ion-item class="new-budget-padding">
+          <ion-label position="floating">Amount</ion-label>
+          <ion-input type="number" formControlName="amount"></ion-input>
+        </ion-item>
+        <!-- <ion-item style="width: 50%;" class="new-budget-padding">
+          <ion-label position="floating">Currency</ion-label>
+          <ion-input type="number" placeholder="Pkr"></ion-input>
+        </ion-item> -->
+      <!-- <ion-button routerLink="/select-label" expand="full">Add Label</ion-button> -->
+    </form>
+  </div>
+
+</ion-content>

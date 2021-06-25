@@ -1,0 +1,1 @@
+export const userUrl = 'http://usermanagement-api.cointracker.nastechltd.co/'

@@ -1,0 +1,57 @@
+<ion-header style="background-color: #40E0D0;" class="bg-torq">
+  <ion-toolbar color="primary">
+    <ion-button fill="clear" routerLink="/home" color="light" slot="start">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+    <ion-title>Companies</ion-title>
+    <ion-button fill="clear" color="light" slot="end" routerLink="/add-company">
+      <ion-icon name="add"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Total Companies
+        <ion-text *ngIf="users" style="float: right;" class="ion-margin-right">{{users.length}}</ion-text>
+
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content style="text-align: center;">
+      <ion-icon style="font-size: 56px; text-align: center; color: #40E0D0;" name="podium"></ion-icon>
+    </ion-card-content>
+  </ion-card>
+  <ion-list *ngFor="let user of users">
+    <ion-item-sliding>
+      <ion-item>{{user.fullName}}</ion-item>
+      <ion-item-options slot="end">
+        <ion-button color="danger" (click)="confirmation(user.id)">
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+      </ion-item-options>
+    </ion-item-sliding>
+    
+    <!-- <ion-item-sliding>
+      <ion-item>
+        <ion-label>
+          User 4
+        </ion-label>
+      </ion-item>
+      <ion-item-options>
+        <ion-item-option color="primary">
+          <ion-icon slot="end" size="large" name="create" color="dark"></ion-icon>
+          Edit -->
+        <!-- </ion-item-option> -->
+<!--         
+        <ion-item-option color="danger"  (click)="showAlert()">
+          <ion-icon slot="end" size="large" name="trash"></ion-icon> -->
+          <!-- Delete -->
+        <!-- </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding> -->
+
+  </ion-list>
+
+</ion-content>

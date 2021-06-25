@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Admin Portal</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Total Companies
+        <ion-text *ngIf="companies" style="float: right;" class="ion-margin-right">{{companies.length}}</ion-text>
+
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content style="text-align: center;">
+      <ion-icon style="font-size: 56px; text-align: center; color: #40E0D0;" name="podium"></ion-icon>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list *ngFor="let company of companies">
+    <ion-item-sliding>
+      <ion-item button (click)="visitCompany(company.id)">{{company.name}}</ion-item>
+      <ion-item-options slot="end">
+        <ion-button color="danger" (click)="confirmation(company.id)">
+          <ion-icon name="trash" slot="icon-only"></ion-icon>
+        </ion-button>
+        <ion-button color="tertiary" [routerLink]="['/','update-company', company.id]">
+          <ion-icon name="create-outline" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-item-options>
+    </ion-item-sliding>
+    <!-- <ion-item-sliding>
+      <ion-item>
+        <ion-label>
+          User 4
+        </ion-label>
+      </ion-item>
+      <ion-item-options>
+        <ion-item-option color="primary">
+          <ion-icon slot="end" size="large" name="create" color="dark"></ion-icon>
+        </ion-item-option>
+        
+        <ion-item-option color="danger"  (click)="showAlert()">
+          <ion-icon slot="end" size="large" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding> -->
+
+  </ion-list>
+</ion-content>
